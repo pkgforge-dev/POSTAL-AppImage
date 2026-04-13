@@ -1,0 +1,7 @@
+#!/bin/sh
+dir=$DATADIR/PostalPlus
+mkdir -p "$dir"
+if [ ! -f "$dir"/POSTAL.INI ]; then
+  cp -r "$APPDIR"/bin/POSTAL.INI "$dir"
+fi
+cd "$dir"
