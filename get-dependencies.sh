@@ -16,7 +16,7 @@ echo "Building POSTAL..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/RWS-Studios/POSTAL-SourceCode"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./POSTAL
+git clone --depth 1 "$REPO" ./POSTAL
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
